@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - print out sizes of data in c
+ * Return: 0
+*/
 int main(void)
 {
 	int a;
