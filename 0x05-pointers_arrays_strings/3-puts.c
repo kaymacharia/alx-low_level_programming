@@ -4,10 +4,10 @@
  * _puts - Prints a string .
  * @str: string.
  */
-void _puts(char *str)
+void puts(char *str)
 {
 	while (*str)
-		_putchar(*str++);
+		putchar(*str++);
 
-	_putchar('\n');
+	putchar('\n');
 }
