@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <lists.h>
-#include <string.h>
-
+#include "lists.h"
 /**
- *print_list-List all contents of list
- *@param h: pointer to the beginning of list
+ *print_list -prints List of all contents of linked list
+ *@h: pointer to the beginning of list
  *@ return number of linked list nodes
  */
 size_t print_list(const list_t *h)
