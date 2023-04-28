@@ -3,7 +3,10 @@
 #include "lists.h"
 
 /**
- * adds new node at the beggining of the linked list
+ *add_node- adds new node at the beggining of every linked list
+ *@h- double point  at linked list
+ *
+ *Return- it returns the address o new element and returns NULL if it fails
  * */
 list_t *add_node(list_t **head, const char *str)
 {
