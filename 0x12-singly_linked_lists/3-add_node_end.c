@@ -2,9 +2,10 @@
 #include <string.h>
 #include "list.h"
 /*
- * adds nodes at the end of the linked list
+ *add_node-adds nodes at the end of the linked list
  *
- * 	
+ *Return-return the address of new element or NULL if failed
+ *@str- for input of new code
  * 	*/
 list_t *add_node_end(list_t **head, const char *str)
 {
