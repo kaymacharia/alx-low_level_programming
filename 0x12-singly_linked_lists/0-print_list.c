@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <lists.h>
+#include <string.h>
 
 /**
 * List all contents of list
