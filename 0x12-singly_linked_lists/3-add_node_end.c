@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-/*
- *add_node-adds nodes at the end of the linked list
- *
- *Return-return the address of new element or NULL if failed
- *@str- for input of new code
- * 	*/
+/**
+*add_node_end-adds nodes at the end of the linked list
+*@head:a pointer to the list_t list
+*Return:return the address of new element or NULL if failed
+*@str:for input of new node
+*/
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
