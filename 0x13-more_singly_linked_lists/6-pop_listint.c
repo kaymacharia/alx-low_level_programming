@@ -9,7 +9,7 @@
  *
  * Return: the head node's data (n), or 0 if the list is empty
  */
-int pop_listint(listint_t **macharia)
+int pop_listint(listint_t **head)
 {
 int n;
 listint_t *temp;
