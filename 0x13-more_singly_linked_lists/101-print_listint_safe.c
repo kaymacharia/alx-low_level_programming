@@ -19,10 +19,10 @@ size_t print_listint_safe(const listint_t *kay)
 	count++;
 	printf("[%p] %d\n", (void *) current, current->n);
 
-        /* Move to the next node */
+/* Move to the next node */
 	next = current->next;
 
-        /* Check if we have a loop */
+/* Check if we have a loop */
 	if (next != NULL && next <= current)
 	{
 	printf("-> [%p] %d\n", (void *) next, next->n);
