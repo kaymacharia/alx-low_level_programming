@@ -9,7 +9,7 @@
  */
 int sum_listint(listint_t *kay)
 {
-int sum=0;
+int sum = 0;
 while (kay != NULL)
 {
 sum += kay->n;
