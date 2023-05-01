@@ -1,41 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-size_t looped_listint_len(const listint_t *head);
-size_t print_listint_safe(const listint_t *head)
+
 /**
- * print_listint_safe - Prints a listint_t linked list.
- * @kay:Pointer to the head node of the list.
+ * print_listint_safe - Prints a linked list of integers safely
+ * @kay: Pointer to the head node of the list
  *
- * Return: The number of nodes in the list.
+ * Return: The number of nodes in the list
  */
-size_t looped_listint_len(const listint_t *kay)
+size_t print_listint_safe(const listint_t *kay)
 {
-size_t count = 0;
-const listint_t *kay, *fast;
+	const listint_t *current = kay;
+	const listint_t *next = NULL;
+	size_t count = 0;
 
-if (head == NULL)
-exit(98);
+	while (current != NULL)
+	{
+	count++;
+	printf("[%p] %d\n", (void *) current, current->n);
 
-kay = head;
-fast = head->next;
+        /* Move to the next node */
+	next = current->next;
 
-while (fast != NULL && fast < fast->next)
-{
-printf("[%p] %d\n", (void *)kay, kay->n);
-kay = kay->next;
-fast = fast->next->next;
-count++;
-}
+        /* Check if we have a loop */
+	if (next != NULL && next <= current)
+	{
+	printf("-> [%p] %d\n", (void *) next, next->n);
+	exit(98);
+	}
 
-printf("[%p] %d\n", (void *)kay, kay->n);
-count++;
+	current = next;
+	}
 
-if (fast != NULL)
-{
-printf("-> [%p] %d\n", (void *)fast, fast->n);
-count++;
-}
-
-return (count);
+	return (count);
 }
