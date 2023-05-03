@@ -10,27 +10,75 @@
  */
 size_t print_listint_safe(const listint_t *kay)
 {
-	const listint_t *current = kay;
-	const listint_t *next = NULL;
-	size_t count = 0;
+const listint_t *tortoise, *hare;
+size_t nodes = 1;
 
-	while (current != NULL)
+if (kay == NULL || kay->next == NULL)
+	return (0);
+
+tortoise = kay->next;
+hare = (kay->next)->next;
+
+while (hare)
+{
+	if (tortoise == hare)
 	{
-	count++;
-	printf("[%p] %d\n", (void *) current, current->n);
+		tortoise = kay;
+		while (tortoise != hare)
+		{
+			nodes++;
+			tortoise = tortoise->next;
+			hare = hare->next;
+		}
 
-/* Move to the next node */
-	next = current->next;
+		tortoise = tortoise->next;
+		while (tortoise != hare)
+		{
+			nodes++;
+			tortoise = tortoise->next;
+		}
 
-/* Check if we have a loop */
-	if (next != NULL && next <= current)
-	{
-	printf("-> [%p] %d\n", (void *) next, next->n);
-	exit(98);
+		return (nodes);
 	}
 
-	current = next;
+	tortoise = tortoise->next;
+	hare = (hare->next)->next;
+}
+
+return (0);
+}
+
+/**
+ * print_listint_safe - Prints a listint_t list safely.
+ * @kay: A pointer to the head of the listint_t list.
+ *
+ * Return: The number of nodes in the list.
+ */
+size_t print_listint_safe(const listint_t *kay)
+{
+size_t nodes, index = 0;
+
+nodes = looped_listint_len(kay);
+
+if (nodes == 0)
+{
+	for (; kay != NULL; nodes++)
+	{
+		printf("[%p] %d\n", (void *)kay, kay->n);
+		kay = kay->next;
+	}
+}
+
+else
+{
+	for (index = 0; index < nodes; index++)
+	{
+		printf("[%p] %d\n", (void *)kay, kay->n);
+		kay = kay->next;
 	}
 
-	return (count);
+	printf("-> [%p] %d\n", (void *)kay, kay->n);
+}
+
+return (nodes);
 }
