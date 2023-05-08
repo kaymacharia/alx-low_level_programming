@@ -9,6 +9,7 @@
 *returns: the number of bytes successfully read and written,
 *or zero if an error has already occurred or
 *will occur
+*authour:Kay Macharia
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
