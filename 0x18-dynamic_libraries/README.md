@@ -1,1 +1,1 @@
-UTHOR:Kay Macharia
+UTHOR kAY mACHARIa
