@@ -1,9 +1,2 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -g
-SRC = main.c school.c
-EXECUTABLE = school
-all: $(EXECUTABLE)
-$(EXECUTABLE): $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
-clean:
-	rm -f $(EXECUTABLE)
+all: school.c
+	gcc main.c school.c -o school
