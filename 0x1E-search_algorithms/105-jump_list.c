@@ -2,7 +2,8 @@
 #include <math.h>
 
 /**
- * jump_list - Applies the Jump search algorithm to find a value in a linked list of integers.
+ * jump_list - Applies the Jump search algorithm
+ * to find a value in a linked list of integers.
  *
  * @list: Input list
  * @size: Size of the array

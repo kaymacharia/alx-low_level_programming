@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * rec_search - Implements the Binary search algorithm to find a value in an array of integers.
+ * rec_search - Implements the Binary search algorithm
+ * to find a value in an array of integers.
  *
  * @array: Input array
  * @size: Size of the array
@@ -41,7 +42,8 @@ int rec_search(int *array, size_t size, int value)
 }
 
 /**
- * advanced_binary - Invokes rec_search to retrieve the index of the specified number.
+ * advanced_binary - Invokes rec_search to retrieve
+ * the index of the specified number.
  *
  * @array: Input array
  * @size: Size of the array
